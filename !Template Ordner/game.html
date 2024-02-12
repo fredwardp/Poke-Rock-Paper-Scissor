@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Play</title>
+  </head>
+  <body>
+    <article class="bang_animation">
+      <img src="assets/img/pokemon_version/bang.png" alt="" />
+    </article>
+    <section></section>
+    <img
+      class="pageloader_img"
+      src="assets/img/pokemon_version/ball.png"
+      alt=""
+    />
+    <header>
+      <!-- <div class="score">
+        <p class="score_p">You: <span class="score_you"></span></p>
+        <p class="score_p">Your Enemy: <span class="score_enemy"></span></p>
+      </div> -->
+      <div class="container">
+        <p class="score_message"></p>
+        <div class="rock_div" onclick="chooseRock()">
+          <img src="assets/img/pokemon_version/rock_group_biger.png" alt="" />
+        </div>
+        <div class="scissor_div" onclick="chooseScissor()">
+          <img
+            src="assets/img/pokemon_version/scissor_group_bigger.png"
+            alt=""
+          />
+        </div>
+        <div class="paper_div" onclick="choosePaper()">
+          <img src="assets/img/pokemon_version/paper_group_bigger.png" alt="" />
+        </div>
+        <a href=".">
+          <img
+            class="restart"
+            src="assets/img/pokemon_version/restart_smaller.png"
+            alt="restart_button"
+          />
+        </a>
+      </div>
+      <audio src="assets/sound/battle_music.mp3" controls autoplay></audio>
+    </header>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,242 @@
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  overflow: hidden;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 62ch;
+  text-wrap: pretty;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  background: url(../img/pokemon_version/Arena_bright_darkened.png) center
+    no-repeat;
+  background-size: cover;
+  height: 100svh;
+  padding: 3vw 22vw 6vw 22vw;
+}
+
+.container {
+  margin-inline: auto;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.container div {
+  cursor: pointer;
+  transition: all 0.4s;
+  width: 28%;
+  animation: movement 2s 1;
+  animation-iteration-count: infinite;
+}
+
+@keyframes movement {
+  0% {
+    transform: translateY(-6px);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+/* .container div img {
+  width: 60%;
+} */
+
+.container div:hover {
+  scale: 1.1;
+}
+
+.rock_div {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.scissor_div {
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.paper_div {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+.restart {
+  margin-inline: auto;
+  position: absolute;
+  bottom: -3vw;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  cursor: pointer;
+}
+
+audio {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0.1;
+  transition: all 0.3s;
+}
+
+audio:hover {
+  opacity: 1;
+}
+
+.score_message {
+  position: absolute;
+  top: 23vw;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  width: max-content;
+  color: white;
+  font-size: 3.5rem;
+  opacity: 0;
+  text-align: center;
+}
+
+.bang_animation {
+  background-color: rgba(0, 0, 0, 0.95);
+  height: 100svh;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  animation: bang 1s forwards;
+}
+
+@keyframes bang {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+  1% {
+    opacity: 0;
+    display: flex;
+  }
+  70% {
+    opacity: 100%;
+  }
+  99% {
+    display: flex;
+  }
+  100% {
+    display: none;
+  }
+}
+
+section {
+  position: absolute;
+  width: 100%;
+  height: 100svh;
+  top: 0;
+  background: url(../img/pokemon_version/bg_2.png);
+  animation: pageloader 2s forwards;
+  z-index: 999;
+}
+
+@keyframes pageloader {
+  0% {
+    opacity: 100%;
+  }
+  70% {
+    opacity: 100%;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    display: none;
+  }
+}
+
+.pageloader_img {
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1000;
+  animation: ball_pageloader 2s forwards;
+}
+
+@keyframes ball_pageloader {
+  0% {
+    display: none;
+    opacity: 100%;
+    scale: 1;
+  }
+  1% {
+    display: flex;
+  }
+  50% {
+    opacity: 100%;
+  }
+  99% {
+    display: flex;
+  }
+  100% {
+    display: none;
+    scale: 4;
+    opacity: 0;
+  }
+}

@@ -1,0 +1,82 @@
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 62ch;
+  text-wrap: pretty;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+header {
+  background: url(../img/pokemon_version/bg_2.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+.rps {
+  margin-top: -130px;
+}
+
+.ctp {
+  width: 20%;
+}
+
+.pkm {
+  margin-top: -80px;
+}
+
+a {
+  width: 30%;
+  margin-top: -2%;
+  transition: all 0.3s ease-in;
+}
+
+a:hover {
+  scale: 1.1;
+}
