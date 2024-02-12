@@ -53,8 +53,9 @@ li {
 }
 
 header {
-  background: url(../img/pokemon_version/Arena_bright_darkened.png) center
-    no-repeat;
+  background-image: url(../img/pokemon_version/Arena_bright_darkened.png);
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 100svh;
   padding: 3vw 22vw 6vw 22vw;

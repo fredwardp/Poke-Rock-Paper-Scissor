@@ -1,15 +1,16 @@
 // rock = 1
 // paper = 2
 // scissor = 3
-
+let audio = document.querySelector("audio");
+audio.volume = 0.1;
 let ergebnis = document.querySelector(".score_message");
 console.log(ergebnis);
 const scissor = document.querySelector(".scissor_div");
 const paper = document.querySelector(".paper_div");
 const rock = document.querySelector(".rock_div");
 
-const myScore = Number(document.querySelector(".score_you").innerText);
-console.log(myScore);
+// const myScore = Number(document.querySelector(".score_you").innerText);
+// console.log(myScore);
 
 const bang = document.querySelector(".bang_animation");
 function chooseRock() {
@@ -80,3 +81,30 @@ function choosePaper() {
     paper.style.opacity = "0.5";
   }
 }
+
+const header = document.querySelector("header");
+
+const backgrounds = [];
+
+const backgroundSwitch = () => {
+  let backgroundNumber = Number(Math.ceil(Math.random() * 6));
+  console.log(backgroundNumber);
+  if (backgroundNumber === 1) {
+    header.style.backgroundImage =
+      "url(assets/img/pokemon_version/Arena_bright_darkened.png)";
+  } else if (backgroundNumber === 2) {
+    header.style.backgroundImage =
+      "url(assets/img/pokemon_version/background2.png)";
+  } else if (backgroundNumber === 3) {
+    header.style.backgroundImage =
+      "url(assets/img/pokemon_version/background3.png)";
+  } else if (backgroundNumber === 4) {
+    header.style.backgroundImage = "url(assets/img/pokemon_version/bg4.png)";
+  } else if (backgroundNumber === 5) {
+    header.style.backgroundImage = "url(assets/img/pokemon_version/bg5.png)";
+  } else if (backgroundNumber === 6) {
+    header.style.backgroundImage = "url(assets/img/pokemon_version/bg6.png)";
+  }
+};
+
+backgroundSwitch();
