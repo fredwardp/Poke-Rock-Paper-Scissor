@@ -140,14 +140,15 @@ audio:hover {
 
 .score_message {
   position: absolute;
-  top: 23vw;
+  top: 20vw;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
   width: max-content;
   color: white;
-  font-size: 3.5rem;
+  font-size: 4rem;
+  font-weight: 700;
   opacity: 0;
   text-align: center;
 }
