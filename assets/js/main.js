@@ -13,71 +13,82 @@ const rock = document.querySelector(".rock_div");
 // console.log(myScore);
 
 const bang = document.querySelector(".bang_animation");
-function chooseRock() {
+
+function chooseHand(hand) {
   let enemyMove = Number(Math.ceil(Math.random() * 3));
 
   ergebnis.style.opacity = "1";
   if (enemyMove === 1) {
-    ergebnis.innerHTML = "Draw <br> both had Rock";
-    scissor.style.opacity = "0.1";
-    rock.style.opacity = "1";
-    paper.style.opacity = "0.1";
-    bang.style.animation = "bang 1s forwards";
+    switch (hand) {
+      case "rock":
+        console.log(hand);
+        ergebnis.innerHTML = "Draw <br> both had Rock";
+        scissor.style.opacity = "0.1";
+        rock.style.opacity = "1";
+        paper.style.opacity = "0.1";
+        break;
+      case "paper":
+        console.log(hand);
+        ergebnis.innerHTML = "You win <br> enemy had Rock";
+        scissor.style.opacity = "0.1";
+        rock.style.opacity = "0.5";
+        paper.style.opacity = "1";
+        break;
+      case "scissor":
+        console.log(hand);
+        ergebnis.innerHTML = "You lose <br> enemy had Rock";
+        scissor.style.opacity = "0.1";
+        rock.style.opacity = "1";
+        paper.style.opacity = "0.5";
+        break;
+    }
   } else if (enemyMove === 2) {
-    ergebnis.innerHTML = "You lose <br> enemy had Paper";
-    scissor.style.opacity = "0.1";
-    rock.style.opacity = "0.5";
-    paper.style.opacity = "1";
-
-    myScore.innerHTML += newScore;
-  } else {
-    ergebnis.innerHTML = "You win";
-    scissor.style.opacity = "0.5";
-    rock.style.opacity = "1";
-    paper.style.opacity = "0.1";
-  }
-}
-
-function chooseScissor() {
-  let enemyMove = Number(Math.ceil(Math.random() * 3));
-
-  ergebnis.style.opacity = "1";
-  if (enemyMove === 1) {
-    ergebnis.innerHTML = "You lose <br> enemy had Rock";
-    scissor.style.opacity = "0.5";
-    rock.style.opacity = "1";
-    paper.style.opacity = "0.1";
-  } else if (enemyMove === 2) {
-    ergebnis.innerHTML = "You win";
-    scissor.style.opacity = "1";
-    rock.style.opacity = "0.1";
-    paper.style.opacity = "0.5";
-  } else {
-    ergebnis.innerHTML = "Draw <br> both Scissor";
-    scissor.style.opacity = "1";
-    rock.style.opacity = "0.1";
-    paper.style.opacity = "0.1";
-  }
-}
-
-function choosePaper() {
-  let enemyMove = Number(Math.ceil(Math.random() * 3));
-
-  ergebnis.style.opacity = "1";
-  if (enemyMove === 1) {
-    ergebnis.innerHTML = "You win";
-    scissor.style.opacity = "0.1";
-    rock.style.opacity = "0.5";
-    paper.style.opacity = "1";
-  } else if (enemyMove === 2) {
-    ergebnis.innerHTML = "Draw <br> both had Paper";
-    scissor.style.opacity = "0.1";
-    rock.style.opacity = "0.1";
-    paper.style.opacity = "1";
-  } else {
-    ergebnis.innerHTML = "You lose <br> enemy had Scissor";
-    scissor.style.opacity = "1";
-    rock.style.opacity = "0.1";
-    paper.style.opacity = "0.5";
+    switch (hand) {
+      case "rock":
+        console.log(hand);
+        ergebnis.innerHTML = "You lose <br> enemy had Paper";
+        scissor.style.opacity = "0.1";
+        rock.style.opacity = "0.5";
+        paper.style.opacity = "1";
+        break;
+      case "paper":
+        console.log(hand);
+        ergebnis.innerHTML = "Draw <br> both had Paper";
+        scissor.style.opacity = "0.1";
+        rock.style.opacity = "0.1";
+        paper.style.opacity = "1";
+        break;
+      case "scissor":
+        console.log(hand);
+        ergebnis.innerHTML = "You win <br> enemy had Paper";
+        scissor.style.opacity = "1";
+        rock.style.opacity = "0.1";
+        paper.style.opacity = "0.5";
+        break;
+    }
+  } else if (enemyMove === 3) {
+    switch (hand) {
+      case "rock":
+        console.log(hand);
+        ergebnis.innerHTML = "You win <br> enemy had Scissor";
+        scissor.style.opacity = "0.5";
+        rock.style.opacity = "1";
+        paper.style.opacity = "0.1";
+        break;
+      case "paper":
+        console.log(hand);
+        ergebnis.innerHTML = "You lose <br> enemy had Scissor";
+        scissor.style.opacity = "1";
+        rock.style.opacity = "0.1";
+        paper.style.opacity = "0.5";
+        break;
+      case "scissor":
+        console.log(hand);
+        ergebnis.innerHTML = "Draw <br> both Scissor";
+        scissor.style.opacity = "1";
+        rock.style.opacity = "0.1";
+        paper.style.opacity = "0.1";
+        break;
+    }
   }
 }

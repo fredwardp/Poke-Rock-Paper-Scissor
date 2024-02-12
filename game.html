@@ -24,16 +24,16 @@
       </div> -->
       <div class="container">
         <p class="score_message"></p>
-        <div class="rock_div" onclick="chooseRock()">
+        <div class="rock_div" onclick="chooseHand('rock')">
           <img src="assets/img/pokemon_version/rock_group_biger.png" alt="" />
         </div>
-        <div class="scissor_div" onclick="chooseScissor()">
+        <div class="scissor_div" onclick="chooseHand('scissor')">
           <img
             src="assets/img/pokemon_version/scissor_group_bigger.png"
             alt=""
           />
         </div>
-        <div class="paper_div" onclick="choosePaper()">
+        <div class="paper_div" onclick="chooseHand('paper')">
           <img src="assets/img/pokemon_version/paper_group_bigger.png" alt="" />
         </div>
         <a href=".">
@@ -44,7 +44,7 @@
           />
         </a>
       </div>
-      <audio src="assets/sound/battle_music.mp3" controls autoplay></audio>
+      <audio src="assets/sound/battle_music.mp3" controls></audio>
     </header>
     <script src="./assets/js/main.js"></script>
   </body>
