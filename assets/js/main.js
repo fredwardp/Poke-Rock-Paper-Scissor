@@ -23,21 +23,21 @@ function chooseHand(hand) {
       case "rock":
         console.log(hand);
         ergebnis.innerHTML = "Draw <br> both had Rock";
-        scissor.style.opacity = "0.1";
+        scissor.style.opacity = "0.2";
         rock.style.opacity = "1";
-        paper.style.opacity = "0.1";
+        paper.style.opacity = "0.2";
         break;
       case "paper":
         console.log(hand);
         ergebnis.innerHTML = "You win <br> enemy had Rock";
-        scissor.style.opacity = "0.1";
+        scissor.style.opacity = "0.2";
         rock.style.opacity = "0.5";
         paper.style.opacity = "1";
         break;
       case "scissor":
         console.log(hand);
         ergebnis.innerHTML = "You lose <br> enemy had Rock";
-        scissor.style.opacity = "0.1";
+        scissor.style.opacity = "0.2";
         rock.style.opacity = "1";
         paper.style.opacity = "0.5";
         break;
@@ -47,22 +47,22 @@ function chooseHand(hand) {
       case "rock":
         console.log(hand);
         ergebnis.innerHTML = "You lose <br> enemy had Paper";
-        scissor.style.opacity = "0.1";
+        scissor.style.opacity = "0.2";
         rock.style.opacity = "0.5";
         paper.style.opacity = "1";
         break;
       case "paper":
         console.log(hand);
         ergebnis.innerHTML = "Draw <br> both had Paper";
-        scissor.style.opacity = "0.1";
-        rock.style.opacity = "0.1";
+        scissor.style.opacity = "0.2";
+        rock.style.opacity = "0.2";
         paper.style.opacity = "1";
         break;
       case "scissor":
         console.log(hand);
         ergebnis.innerHTML = "You win <br> enemy had Paper";
         scissor.style.opacity = "1";
-        rock.style.opacity = "0.1";
+        rock.style.opacity = "0.2";
         paper.style.opacity = "0.5";
         break;
     }
@@ -73,21 +73,21 @@ function chooseHand(hand) {
         ergebnis.innerHTML = "You win <br> enemy had Scissor";
         scissor.style.opacity = "0.5";
         rock.style.opacity = "1";
-        paper.style.opacity = "0.1";
+        paper.style.opacity = "0.2";
         break;
       case "paper":
         console.log(hand);
         ergebnis.innerHTML = "You lose <br> enemy had Scissor";
         scissor.style.opacity = "1";
-        rock.style.opacity = "0.1";
+        rock.style.opacity = "0.2";
         paper.style.opacity = "0.5";
         break;
       case "scissor":
         console.log(hand);
         ergebnis.innerHTML = "Draw <br> both Scissor";
         scissor.style.opacity = "1";
-        rock.style.opacity = "0.1";
-        paper.style.opacity = "0.1";
+        rock.style.opacity = "0.2";
+        paper.style.opacity = "0.2";
         break;
     }
   }
